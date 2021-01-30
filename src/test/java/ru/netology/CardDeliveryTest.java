@@ -12,6 +12,7 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class CardDeliveryTest {
+
     @Test
     void shouldSubmitForm() {
         open("http://localhost:9999/");
@@ -46,7 +47,7 @@ public class CardDeliveryTest {
     @Test
     void shouldSubmitFormWithCalendar() {
         open("http://localhost:9999/");
-        $("[data-test-id=city] input").setValue("Казань");
+        $("[data-test-id=city] input").setValue("Самара");
         LocalDate date=LocalDate.now().plusDays(7);
         String year= String.valueOf(date.getYear());
         int numberMonth=date.getMonthValue();
